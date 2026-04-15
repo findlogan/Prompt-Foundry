@@ -1,0 +1,39 @@
+{
+  "name": "prompt-foundry",
+  "version": "0.1.0",
+  "description": "Reusable prompts, skills, and agents with an installable NPX CLI.",
+  "type": "module",
+  "workspaces": [
+    "website"
+  ],
+  "bin": {
+    "prompt-foundry": "./bin/prompt-foundry.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "content",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace prompt-foundry-website",
+    "build": "npm run build --workspace prompt-foundry-website",
+    "check": "node ./bin/prompt-foundry.js list all",
+    "website:install": "npm install --workspace prompt-foundry-website",
+    "website:build": "npm run build --workspace prompt-foundry-website"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "prompt",
+    "ai",
+    "cli",
+    "npx",
+    "skills",
+    "agents"
+  ],
+  "license": "MIT",
+  "author": "Logan Johnson"
+}
